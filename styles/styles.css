@@ -7,6 +7,7 @@
   background-color: #ffffff;
   max-width: 990px;
   margin: auto;
+  container: es-rc-main/inline-size;
 }
 #es-rc #es-rc-content ::-moz-selection {
   background-color: #a5603f;
@@ -44,4 +45,19 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+#es-rc #es-rc-content .es-features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#es-rc #es-rc-content .es-features__list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#es-rc #es-rc-content .es-features__list__checkmark {
+  width: 2rem;
+  height: 2rem;
+  margin: unset;
 }/*# sourceMappingURL=styles.css.map */
