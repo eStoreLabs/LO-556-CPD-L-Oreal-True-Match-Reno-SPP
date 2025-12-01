@@ -8,7 +8,9 @@ $fw-regular: 400;
 $fw-bold: 700;
 
 $fs-base: 16px;
+$fs-base-md: 20px;
 $fs-header: 32px;
+$fs-header-md: 40px;
 
 $px-S: 8px;
 $px-M: 16px;
@@ -68,6 +70,9 @@ $media-breakpoint-xl: 1200px;
     font-weight: $fw-bold;
     text-align: center;
     margin-block: $px-M;
+    @container es-rc-main (min-width: $media-breakpoint-md) {
+      font-size: $fs-header-md;
+    }
   }
   // accessibility improvement for animations
   @media (prefers-reduced-motion: reduce) {
@@ -76,6 +81,99 @@ $media-breakpoint-xl: 1200px;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+
+  .es-kv {
+    &__text-wrapper {
+      padding: $px-L;
+      text-align: center;
+      text-wrap: balance;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: $px-L;
+      height: 100%;
+    }
+    &__logo {
+      max-width: 200px;
+    }
+    &__text {
+      text-transform: uppercase;
+      font-weight: $fw-bold;
+      &--headline {
+        font-size: $fs-header;
+      }
+      &--slogan {
+        margin-top: $px-M;
+        font-size: $fs-base-md;
+      }
+    }
+    @container es-rc-main (min-width: 576px) {
+      position: relative;
+
+      &__logo {
+        width: 50%;
+        margin: unset;
+      }
+      &__text-wrapper {
+        text-align: left;
+        align-items: flex-start;
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &__text {
+        &--headline {
+          font-size: 16px;
+        }
+        &--slogan {
+          font-size: 10px;
+        }
+      }
+    }
+    @container es-rc-main (min-width: 660px) {
+      &__text {
+        &--headline {
+          font-size: 20px;
+        }
+        &--slogan {
+          font-size: 12px;
+        }
+      }
+    }
+    @container es-rc-main (min-width: 768px) {
+      &__logo {
+        width: 55%;
+      }
+      &__text {
+        &--headline {
+          font-size: 24px;
+        }
+        &--slogan {
+          font-size: 14px;
+        }
+      }
+    }
+    @container es-rc-main (min-width: 880px) {
+      &__logo {
+        width: 66%;
+      }
+      &__text {
+        &--headline {
+          font-size: 28px;
+        }
+        &--slogan {
+          font-size: 16px;
+        }
+      }
+    }
+    @container es-rc-main (min-width: 980px) {
+      &__logo {
+        width: 76%;
+      }
     }
   }
 

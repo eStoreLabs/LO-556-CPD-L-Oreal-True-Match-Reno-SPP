@@ -38,12 +38,100 @@
   text-align: center;
   margin-block: 16px;
 }
+@container es-rc-main (min-width: $media-breakpoint-md) {
+  #es-rc #es-rc-content .es-section-title {
+    font-size: 40px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   #es-rc #es-rc-content * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+#es-rc #es-rc-content .es-kv__text-wrapper {
+  padding: 24px;
+  text-align: center;
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+}
+#es-rc #es-rc-content .es-kv__logo {
+  max-width: 200px;
+}
+#es-rc #es-rc-content .es-kv__text {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#es-rc #es-rc-content .es-kv__text--headline {
+  font-size: 32px;
+}
+#es-rc #es-rc-content .es-kv__text--slogan {
+  margin-top: 16px;
+  font-size: 20px;
+}
+@container es-rc-main (min-width: 576px) {
+  #es-rc #es-rc-content .es-kv {
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-kv__logo {
+    width: 50%;
+    margin: unset;
+  }
+  #es-rc #es-rc-content .es-kv__text-wrapper {
+    text-align: left;
+    align-items: flex-start;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #es-rc #es-rc-content .es-kv__text--headline {
+    font-size: 16px;
+  }
+  #es-rc #es-rc-content .es-kv__text--slogan {
+    font-size: 10px;
+  }
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-kv__text--headline {
+    font-size: 20px;
+  }
+  #es-rc #es-rc-content .es-kv__text--slogan {
+    font-size: 12px;
+  }
+}
+@container es-rc-main (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv__logo {
+    width: 55%;
+  }
+  #es-rc #es-rc-content .es-kv__text--headline {
+    font-size: 24px;
+  }
+  #es-rc #es-rc-content .es-kv__text--slogan {
+    font-size: 14px;
+  }
+}
+@container es-rc-main (min-width: 880px) {
+  #es-rc #es-rc-content .es-kv__logo {
+    width: 66%;
+  }
+  #es-rc #es-rc-content .es-kv__text--headline {
+    font-size: 28px;
+  }
+  #es-rc #es-rc-content .es-kv__text--slogan {
+    font-size: 16px;
+  }
+}
+@container es-rc-main (min-width: 980px) {
+  #es-rc #es-rc-content .es-kv__logo {
+    width: 76%;
   }
 }
 #es-rc #es-rc-content .es-features__list {
