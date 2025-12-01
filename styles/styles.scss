@@ -64,12 +64,22 @@ $media-breakpoint-xl: 1200px;
     display: block;
   }
 
+  .es-section {
+    padding: $px-L;
+    @container es-rc-main (min-width: $media-breakpoint-md) {
+      padding: $px-XL;
+    }
+  }
   .es-section-title {
     font-family: $text-main;
     font-size: $fs-header;
-    font-weight: $fw-bold;
+    font-weight: $fw-regular;
     text-align: center;
     margin-block: $px-M;
+    text-transform: uppercase;
+    &--span {
+      font-weight: $fw-bold;
+    }
     @container es-rc-main (min-width: $media-breakpoint-md) {
       font-size: $fs-header-md;
     }
@@ -188,9 +198,50 @@ $media-breakpoint-xl: 1200px;
         gap: $px-M;
       }
       &__checkmark {
-        width: 2rem;
-        height: 2rem;
+        width: 22px;
+        height: 22px;
         margin: unset;
+      }
+    }
+    @container es-rc-main (min-width: 660px) {
+      display: flex;
+      flex-direction: row;
+      gap: $px-L;
+      &__img {
+        width: 50%;
+        height: auto;
+        aspect-ratio: 1/1;
+        margin: unset;
+      }
+      &__right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      &__title {
+        text-align: left;
+        font-size: 24px;
+      }
+      &__list {
+        font-size: 18px;
+      }
+    }
+    @container es-rc-main (min-width: 768px) {
+      gap: $px-XL;
+      &__title {
+        font-size: 32px;
+      }
+      &__list {
+        font-size: 24px;
+      }
+    }
+    @container es-rc-main (min-width: 880px) {
+      &__title {
+        font-size: 34px;
+      }
+      &__list {
+        font-size: 25.5px;
       }
     }
   }
