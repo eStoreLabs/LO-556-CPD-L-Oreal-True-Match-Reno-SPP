@@ -55,6 +55,22 @@
     font-size: 40px;
   }
 }
+#es-rc #es-rc-content .es-desktop {
+  display: none;
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-desktop {
+    display: block;
+  }
+}
+#es-rc #es-rc-content .es-mobile {
+  display: block;
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-mobile {
+    display: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   #es-rc #es-rc-content * {
     animation-duration: 0.01ms !important;
@@ -204,5 +220,69 @@
   }
   #es-rc #es-rc-content .es-features__list {
     font-size: 25.5px;
+  }
+}
+#es-rc #es-rc-content .es-shades {
+  color: #3d1e1a;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(180deg, rgb(61, 30, 26) 0%, rgb(146, 96, 70) 25%, rgb(181, 138, 117) 50%, rgb(213, 178, 161) 75%, rgb(245, 219, 207) 100%);
+}
+#es-rc #es-rc-content .es-shades__text-mobile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+#es-rc #es-rc-content .es-shades__text {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+#es-rc #es-rc-content .es-shades__text--span {
+  font-size: 16px;
+  display: block;
+  text-transform: none;
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-shades {
+    padding: 0;
+    position: relative;
+    color: #ffffff;
+    background: unset;
+  }
+  #es-rc #es-rc-content .es-shades__text {
+    position: absolute;
+    transform: translate(50%, -50%);
+    font-size: 14px;
+  }
+  #es-rc #es-rc-content .es-shades__text-mobile-wrapper {
+    margin: 0;
+  }
+  #es-rc #es-rc-content .es-shades__text--span {
+    font-size: 12px;
+  }
+  #es-rc #es-rc-content .es-shades__text--1 {
+    top: 10%;
+    left: -8%;
+    width: 16.6666666667%;
+  }
+  #es-rc #es-rc-content .es-shades__text--2 {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 33.3333333333%;
+  }
+  #es-rc #es-rc-content .es-shades__text--3 {
+    bottom: -3%;
+    right: 12.5%;
+    width: 25%;
+  }
+}
+@container es-rc-main (min-width: 880px) {
+  #es-rc #es-rc-content .es-shades__text {
+    font-size: 20px;
+  }
+  #es-rc #es-rc-content .es-shades__text--span {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=styles.css.map */

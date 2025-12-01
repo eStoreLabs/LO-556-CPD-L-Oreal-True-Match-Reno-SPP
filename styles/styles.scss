@@ -84,6 +84,19 @@ $media-breakpoint-xl: 1200px;
       font-size: $fs-header-md;
     }
   }
+
+  .es-desktop {
+    display: none;
+    @container es-rc-main (min-width: 660px) {
+      display: block;
+    }
+  }
+  .es-mobile {
+    display: block;
+    @container es-rc-main (min-width: 660px) {
+      display: none;
+    }
+  }
   // accessibility improvement for animations
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -242,6 +255,77 @@ $media-breakpoint-xl: 1200px;
       }
       &__list {
         font-size: 25.5px;
+      }
+    }
+  }
+
+  .es-shades {
+    color: #3d1e1a;
+    text-align: center;
+    font-weight: $fw-bold;
+    background: linear-gradient(
+      180deg,
+      rgba(61, 30, 26, 1) 0%,
+      rgba(146, 96, 70, 1) 25%,
+      rgba(181, 138, 117, 1) 50%,
+      rgba(213, 178, 161, 1) 75%,
+      rgba(245, 219, 207, 1) 100%
+    );
+
+    &__text-mobile-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $px-M;
+      margin-top: $px-M;
+    }
+    &__text {
+      font-size: 20px;
+      text-transform: uppercase;
+      &--span {
+        font-size: 16px;
+        display: block;
+        text-transform: none;
+      }
+    }
+    @container es-rc-main (min-width: 660px) {
+      padding: 0;
+      position: relative;
+      color: $color-bg;
+      background: unset;
+      &__text {
+        position: absolute;
+        transform: translate(50%, -50%);
+        font-size: 14px;
+        &-mobile-wrapper {
+          margin: 0;
+        }
+        &--span {
+          font-size: 12px;
+        }
+        &--1 {
+          top: 10%;
+          left: -8%;
+          width: calc(1 / 6 * 100%);
+        }
+        &--2 {
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+          width: calc(1 / 3 * 100%);
+        }
+        &--3 {
+          bottom: -3%;
+          right: 12.5%;
+          width: calc(1 / 4 * 100%);
+        }
+      }
+    }
+    @container es-rc-main (min-width: 880px) {
+      &__text {
+        font-size: 20px;
+        &--span {
+          font-size: 16px;
+        }
       }
     }
   }
