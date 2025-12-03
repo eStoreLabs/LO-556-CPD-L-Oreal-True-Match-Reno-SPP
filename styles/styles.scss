@@ -10,7 +10,8 @@ $fw-bold: 700;
 $fs-base: 16px;
 $fs-base-md: 20px;
 $fs-header: 32px;
-$fs-header-md: 40px;
+$fs-header-md: 24px;
+$fs-header-lg: 34px;
 
 $px-S: 8px;
 $px-M: 16px;
@@ -35,7 +36,7 @@ $media-breakpoint-xl: 1200px;
   line-height: 1.2;
   color: $color-main;
   background-color: $color-bg;
-  max-width: 990px;
+  max-width: 1000px;
   margin: auto;
   container: es-rc-main / inline-size;
 
@@ -66,7 +67,7 @@ $media-breakpoint-xl: 1200px;
 
   .es-section {
     padding: $px-L;
-    @container es-rc-main (min-width: $media-breakpoint-md) {
+    @container es-rc-main (min-width: 660px) {
       padding: $px-XL;
     }
   }
@@ -75,13 +76,17 @@ $media-breakpoint-xl: 1200px;
     font-size: $fs-header;
     font-weight: $fw-regular;
     text-align: center;
+    text-wrap: balance;
     margin-block: $px-M;
     text-transform: uppercase;
     &--span {
       font-weight: $fw-bold;
     }
-    @container es-rc-main (min-width: $media-breakpoint-md) {
+    @container es-rc-main (min-width: 660px) {
       font-size: $fs-header-md;
+    }
+    @container es-rc-main (min-width: 660px) {
+      font-size: $fs-header-lg;
     }
   }
 
@@ -326,6 +331,59 @@ $media-breakpoint-xl: 1200px;
         &--span {
           font-size: 16px;
         }
+      }
+    }
+  }
+
+  .es-steps {
+    padding: 0;
+    overflow: hidden;
+    margin-top: $px-XL;
+    &__bg-image {
+      width: 175%;
+    }
+    &__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $px-M;
+      margin: $px-L auto;
+    }
+    &__steps-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $px-M;
+    }
+    &__step {
+      line-height: 1.59;
+      &__title {
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        font-size: calc($fs-base * 1.136);
+      }
+    }
+    @container es-rc-main (min-width: 660px) {
+      position: relative;
+      &__bg-image {
+        width: 100%;
+      }
+      &__text-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        width: 50%;
+
+        .es-section-title {
+          margin: unset;
+          text-align: left;
+        }
+      }
+    }
+    @container es-rc-main (min-width: 760px) {
+      &__text-wrapper {
+        padding: $px-XL;
       }
     }
   }

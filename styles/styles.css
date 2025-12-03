@@ -5,7 +5,7 @@
   line-height: 1.2;
   color: #000000;
   background-color: #ffffff;
-  max-width: 990px;
+  max-width: 1000px;
   margin: auto;
   container: es-rc-main/inline-size;
 }
@@ -34,7 +34,7 @@
 #es-rc #es-rc-content .es-section {
   padding: 24px;
 }
-@container es-rc-main (min-width: $media-breakpoint-md) {
+@container es-rc-main (min-width: 660px) {
   #es-rc #es-rc-content .es-section {
     padding: 32px;
   }
@@ -44,15 +44,21 @@
   font-size: 32px;
   font-weight: 400;
   text-align: center;
+  text-wrap: balance;
   margin-block: 16px;
   text-transform: uppercase;
 }
 #es-rc #es-rc-content .es-section-title--span {
   font-weight: 700;
 }
-@container es-rc-main (min-width: $media-breakpoint-md) {
+@container es-rc-main (min-width: 660px) {
   #es-rc #es-rc-content .es-section-title {
-    font-size: 40px;
+    font-size: 24px;
+  }
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-section-title {
+    font-size: 34px;
   }
 }
 #es-rc #es-rc-content .es-desktop {
@@ -284,5 +290,58 @@
   }
   #es-rc #es-rc-content .es-shades__text--span {
     font-size: 16px;
+  }
+}
+#es-rc #es-rc-content .es-steps {
+  padding: 0;
+  overflow: hidden;
+  margin-top: 32px;
+}
+#es-rc #es-rc-content .es-steps__bg-image {
+  width: 175%;
+}
+#es-rc #es-rc-content .es-steps__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 24px auto;
+}
+#es-rc #es-rc-content .es-steps__steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#es-rc #es-rc-content .es-steps__step {
+  line-height: 1.59;
+}
+#es-rc #es-rc-content .es-steps__step__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18.176px;
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-steps {
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-steps__bg-image {
+    width: 100%;
+  }
+  #es-rc #es-rc-content .es-steps__text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    width: 50%;
+  }
+  #es-rc #es-rc-content .es-steps__text-wrapper .es-section-title {
+    margin: unset;
+    text-align: left;
+  }
+}
+@container es-rc-main (min-width: 760px) {
+  #es-rc #es-rc-content .es-steps__text-wrapper {
+    padding: 32px;
   }
 }/*# sourceMappingURL=styles.css.map */
