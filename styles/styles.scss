@@ -437,4 +437,117 @@ $media-breakpoint-xl: 1200px;
       }
     }
   }
+
+  .es-results {
+    overflow: hidden;
+    &__bg-img {
+      width: 250%;
+      margin-left: -85%;
+    }
+    &__flex-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: $px-L;
+      background: #f6f9f9;
+      background: linear-gradient(
+        180deg,
+        rgba(246, 249, 249, 1) 0%,
+        rgba(250, 252, 249, 1) 38%,
+        rgba(250, 252, 248, 1) 66%,
+        rgba(234, 235, 237, 1) 100%
+      );
+      padding: $px-L;
+    }
+    &__item {
+      text-align: center;
+      text-wrap: balance;
+      &__text {
+        font-weight: $fw-bold;
+        font-size: calc($fs-base * 1.136);
+        &--number {
+          font-size: calc($fs-base * 1.136 * 2.8);
+          display: block;
+        }
+      }
+    }
+    @container es-rc-main (min-width: 440px) {
+      &__bg-img {
+        width: 150%;
+        margin-left: -25%;
+      }
+    }
+    @container es-rc-main (min-width: 660px) {
+      position: relative;
+      &__bg-img {
+        width: 100%;
+        margin-left: unset;
+      }
+      &__item {
+        text-wrap: unset;
+        &__text {
+          &--number {
+            display: block;
+            line-height: 1;
+          }
+        }
+      }
+      &__flex-wrapper {
+        background: transparent;
+        background-color: transparent;
+        padding: 0;
+        position: absolute;
+        margin-top: unset;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $px-L;
+        gap: $px-S;
+        &--left,
+        &--right {
+          flex: 1 1 0;
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          gap: $px-XXL;
+          padding-bottom: $px-S;
+        }
+        &--left {
+          border-bottom: 1px solid $color-bg;
+          justify-content: space-between;
+          .es-results__item {
+            text-align: left;
+            color: $color-bg;
+          }
+        }
+        &--right {
+          border-bottom: 2px solid $color-main;
+          justify-content: flex-end;
+          .es-results__item {
+            text-align: right;
+            color: $color-main;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+    @container es-rc-main (min-width: 768px) {
+      &__item {
+        width: 80%;
+        max-width: 310px;
+      }
+      &__flex-wrapper {
+        padding: $px-XXL $px-XL;
+        &--left,
+        &--right {
+          height: 70%;
+          gap: unset;
+          padding-bottom: $px-M;
+        }
+      }
+    }
+  }
 }
