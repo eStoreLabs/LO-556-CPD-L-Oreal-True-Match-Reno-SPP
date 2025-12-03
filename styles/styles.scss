@@ -647,4 +647,20 @@ $transition: all 0.2s ease-in-out;
       }
     }
   }
+
+  .es-disclaimer {
+    text-align: center;
+    font-size: calc($fs-base * 0.8);
+    @container es-rc-main (min-width: 660px) {
+      font-size: calc($fs-base * 0.6);
+    }
+  }
+
+  .es-footer {
+    background-color: $color-main;
+    padding: $px-L;
+    &__logo {
+      max-width: 150px;
+    }
+  }
 }

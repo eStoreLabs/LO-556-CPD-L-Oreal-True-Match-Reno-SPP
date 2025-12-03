@@ -575,4 +575,20 @@
   #es-rc #es-rc-content .es-cross__flex-item {
     width: 19%;
   }
+}
+#es-rc #es-rc-content .es-disclaimer {
+  text-align: center;
+  font-size: 12.8px;
+}
+@container es-rc-main (min-width: 660px) {
+  #es-rc #es-rc-content .es-disclaimer {
+    font-size: 9.6px;
+  }
+}
+#es-rc #es-rc-content .es-footer {
+  background-color: #000000;
+  padding: 24px;
+}
+#es-rc #es-rc-content .es-footer__logo {
+  max-width: 150px;
 }/*# sourceMappingURL=styles.css.map */
