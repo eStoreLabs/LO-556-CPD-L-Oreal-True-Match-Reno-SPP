@@ -240,22 +240,6 @@
     width: 25%;
   }
 }
-@container es-rc-main (min-width: 880px) {
-  #es-rc #es-rc-content .es-shades__text {
-    font-size: 18px;
-  }
-  #es-rc #es-rc-content .es-shades__text--span {
-    font-size: 15px;
-  }
-  #es-rc #es-rc-content .es-shades__text--1 {
-    top: 11%;
-    left: -5.5%;
-  }
-  #es-rc #es-rc-content .es-shades__text--3 {
-    bottom: -4%;
-    right: 15%;
-  }
-}
 #es-rc #es-rc-content .es-steps {
   overflow: hidden;
 }
@@ -293,8 +277,8 @@
     overflow: hidden;
   }
   #es-rc #es-rc-content .es-steps__bg-image {
-    width: 120%;
-    margin-left: -20%;
+    width: 120% !important;
+    margin-left: -20% !important;
   }
   #es-rc #es-rc-content .es-steps__text-wrapper {
     position: absolute;
@@ -460,20 +444,8 @@
     margin-left: auto;
   }
 }
-@container es-rc-main (min-width: 880px) {
-  #es-rc #es-rc-content .es-results__item {
-    width: 80%;
-    max-width: 310px;
-  }
-  #es-rc #es-rc-content .es-results__flex-wrapper {
-    padding: 40px 32px;
-  }
-  #es-rc #es-rc-content .es-results__flex-wrapper--left, #es-rc #es-rc-content .es-results__flex-wrapper--right {
-    height: 70%;
-    gap: unset;
-    padding-bottom: 16px;
-  }
-}
+
+
 #es-rc #es-rc-content .es-cross__flex-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -528,23 +500,34 @@
   border-radius: 4px;
   width: 100%;
 }
+
 @container es-rc-main (min-width: 660px) {
   #es-rc #es-rc-content .es-cross__badge {
     top: 16%;
     left: 7%;
   }
-}
-@container es-rc-main (min-width: 920px) {
-  #es-rc #es-rc-content .es-cross__flex-wrapper {
-    gap: unset;
-    justify-content: space-between;
-  }
   #es-rc #es-rc-content .es-cross__flex-item {
-    width: 19%;
+  width: 110px;
+  gap: 5px;
+  }
+  #es-rc #es-rc-content .es-cross__button {
+    font-size: 10px;
+    padding: 10px;
+  }
+  #es-rc #es-rc-content .es-cross__text {
+    font-size: 10px;
+  }
+  #es-rc #es-rc-content .es-cross__text--title {
+    font-size: 12px;
   }
   #es-rc #es-rc-content .es-cross__badge {
-    left: -15%;
+    width: 55px;
+    height: 55px;
+    top: 20%;
+    left: -30%;
+
   }
+
 }
 #es-rc #es-rc-content .es-disclaimer {
   text-align: center;
